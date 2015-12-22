@@ -1,6 +1,21 @@
 # Specifies intentionally untracked files to ignore when using Git
 # http://git-scm.com/docs/gitignore
 
+
+﻿#OSX
+.DS_Store
+._*
+
+#Windows
+Thumbs.db
+Desktop.ini
+
+#SublimeText
+*.sublime-*
+
+#Node
 node_modules/
+
+#Ionic
 platforms/
 plugins/
