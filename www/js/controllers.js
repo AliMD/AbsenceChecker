@@ -6,8 +6,9 @@ angular
 
   $scope.userEnter = function (user) {
     console.log('userEnter: %o', user);
+    var enterTime = new Date(); // make date object from now
     user.enter = {
-      timeString: '00:00 am'
+      timeString: enterTime.toLocaleTimeString()
     };
   };
 })
