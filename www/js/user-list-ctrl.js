@@ -13,11 +13,12 @@
       };
     };
 
-    $scope.ChangeIcon = true;
+    $scope.ShowIcon = true;
 
     $scope.inFunc = (user) => {
-      user.ChangeIcon = !user.ChangeIcon;
-      console.log('variable changed to ' + user.ChangeIcon);
+
+      user.ShowIcon = !user.ShowIcon;
+      console.log('variable changed to ' + user.ShowIcon);
     };
 
 

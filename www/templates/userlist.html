@@ -11,11 +11,12 @@
         <img ng-src="{{user.face}}" />
         <h2 ng-bind="user.name"></h2>
         <p ng-show="user.enter" ng-bind-template="Enter: {{user.enter.timeString}}"></p>
-        <button ng-show="ChangeIcon" class="button button-positive" ng-click="inFunc()">
-          <i class="icon ion-checkmark-circled"></i>
-        </button>
-        <button ng-hide="ChangeIcon" class="button button-positive" ng-click="inFunc()">
+
+        <button ng-show="!user.ShowIcon" class="button button-positive" ng-click="inFunc(user)">
           <i class="icon ion-close-circled"></i>
+        </button>
+        <button ng-show="user.ShowIcon" class="button button-positive" ng-click="inFunc(user)">
+          <i class="icon ion-checkmark-circled"></i>
         </button>
 
         <!-- <ion-option-button class="button-assertive">
