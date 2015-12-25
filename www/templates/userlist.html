@@ -2,7 +2,7 @@
   <ion-content>
     <ion-list>
       <ion-item
-        class="item-remove-animate item-avatar item-icon-right"
+        class="item-remove-animate item-avatar item-icon-right item-button-right"
         ng-class="{'user-entered': user.enter}"
         ng-repeat="user in userList"
         type="item-text-wrap"
@@ -11,7 +11,9 @@
         <img ng-src="{{user.face}}" />
         <h2 ng-bind="user.name"></h2>
         <p ng-show="user.enter" ng-bind-template="Enter: {{user.enter.timeString}}"></p>
-        <i class="icon ion-chevron-right icon-accessory"></i>
+        <button class="button button-positive" ng-click="inOut()">
+          <i class="icon ion-checkmark-circled"></i>
+        </button>
 
         <!-- <ion-option-button class="button-assertive">
           Test

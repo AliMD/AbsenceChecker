@@ -4,3 +4,7 @@
 .user-entered .item-content {
   background-color: lightblue;
 }
+
+.item-icon-right .icon {
+    right: 6px;
+}
