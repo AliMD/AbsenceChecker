@@ -12,16 +12,6 @@
         timeString: enterTime.toLocaleTimeString()
       };
     };
-
-    $scope.ShowIcon = true;
-
-    $scope.inFunc = (user) => {
-
-      user.ShowIcon = !user.ShowIcon;
-      console.log('variable changed to ' + user.ShowIcon);
-    };
-
-
   })
 ;
 
