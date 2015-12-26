@@ -2,11 +2,11 @@
   'use strict';
 
   ng
-   .module('starter',[
+   .module('AbsenceChecker',[
     'ionic',
-    'starter.config',
-    'starter.controllers',
-    'starter.services'
+    'AbsenceChecker.config',
+    'AbsenceChecker.pages',
+    'AbsenceChecker.services'
     ]);
 
 

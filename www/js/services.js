@@ -1,7 +1,7 @@
 (function(ng){
   'use strict';
   ng
-  .module('starter.services', [])
+  .module('AbsenceChecker.services', [])
 
   .factory('UserStrorage', function() {
     var
