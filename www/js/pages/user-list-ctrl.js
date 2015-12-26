@@ -2,7 +2,7 @@
   'use strict';
   ng
   .module('AbsenceCheckers.UserList',[])
-  .controller('UserListCtrl', function($scope, UserStrorage) {
+  .controller('UserListCtrl', ['$scope', 'UserStrorage', ($scope, UserStrorage) => {
     $scope.userList = UserStrorage.getUserList();
 
     $scope.userEnter = (user) => {
@@ -20,7 +20,7 @@
         timeString: enterTime.toLocaleTimeString()
       };
     };
-  })
+  }])
 ;
 
 
