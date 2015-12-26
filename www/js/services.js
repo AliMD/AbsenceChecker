@@ -1,9 +1,10 @@
 (function(ng){
   'use strict';
+
   ng
   .module('AbsenceChecker.services', [])
 
-  .factory('UserStrorage', function() {
+  .factory('userStrorage', function() {
     var
 
     _interface = {
