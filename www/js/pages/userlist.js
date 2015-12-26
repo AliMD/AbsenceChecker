@@ -7,14 +7,27 @@
   .controller('UserListCtrl', ['$scope', 'userStrorage', function ($scope, userStrorage) {
     ng
     .extend($scope, {
-      userList : userStrorage.getUserList(),
+      userList: userStrorage.getUserList(),
 
-      userEnter : (user) => {
+      userEnter: (user) => {
         console.log('userEnter: %o', user);
-        var enterTime = new Date(); // make date object from now
+
+        var time = new Date(); // make date object from now
         user.enter = {
-          timeString: enterTime.toLocaleTimeString()
+          timeString: time.toLocaleTimeString()
         };
+        user.showEnterBtn = false;
+        user.showLeaveBtn = true;
+      },
+
+      userLeave: (user) => {
+        console.log('userLeave: %o', user);
+
+        var time = new Date(); // make date object from now
+        user.leave = {
+          timeString: time.toLocaleTimeString()
+        };
+        user.showLeaveBtn = false;
       },
     });
 
