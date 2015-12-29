@@ -29,8 +29,12 @@
         };
         user.showLeaveBtn = false;
       },
-    });
 
+      edit: (user) => {
+         user.expand = true;
+         user.enterTime = "22:22";
+      },
+    });
   }])
   ;
 

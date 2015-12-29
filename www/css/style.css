@@ -8,3 +8,7 @@
 .item-icon-right .icon {
     right: 6px;
 }
+
+.increase-height {
+  height: 200px;
+}

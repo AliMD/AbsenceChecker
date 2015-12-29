@@ -3,10 +3,10 @@
     <ion-list>
       <ion-item
         class="item-remove-animate item-avatar item-icon-right item-button-right"
-        ng-class="{'user-entered': user.enter}"
+        ng-class="{'user-entered': user.enter ,'increase-height': user.expand}"
         ng-repeat="user in userList"
         type="item-text-wrap"
-        ng-init="user.showEnterBtn = true; user.showLeaveBtn = false;">
+        ng-init="user.showEnterBtn = true; user.showLeaveBtn = false;" ng-click="edit(user)">
 
         <img ng-src="{{user.face}}" />
         <h2 ng-bind="user.name"></h2>
@@ -17,7 +17,8 @@
         <button class="button button-positive" ng-click="userLeave(user)" ng-show="user.showLeaveBtn">
           <i class="icon ion-close-circled"></i>
         </button>
-
+        <input ng-show="user.expand" type="time" ng-value="user.enterTime">
+        <input ng-show="user.expand" type="time" >
         <!-- <ion-option-button class="button-assertive">
           Test
         </ion-option-button> -->
