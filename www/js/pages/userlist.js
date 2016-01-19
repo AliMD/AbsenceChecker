@@ -14,7 +14,7 @@
 
         var time = new Date(); // make date object from now
         user.enter = {
-          timeString: time.toLocaleTimeString()
+          timeString: time.toLocaleTimeString('en-US', { hour12: false })
         };
         user.showEnterBtn = false;
         user.showLeaveBtn = true;
@@ -25,14 +25,13 @@
 
         var time = new Date(); // make date object from now
         user.leave = {
-          timeString: time.toLocaleTimeString()
+          timeString: time.toLocaleTimeString('en-US', { hour12: false })
         };
         user.showLeaveBtn = false;
       },
 
-      edit: (user) => {
+      editable: (user) => {
          user.expand = true;
-         user.enterTime = "22:22";
       },
     });
   }])
